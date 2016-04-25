@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             FileUtilities fileUtilities = FileUtilities.getInstance();
             String[] files;
             try {
-                files = MainActivity.this.getAssets().list("");
+                files = this.getAssets().list("");
                 for(int i = 0; i < files.length; i++){
                     if(files[i].endsWith(".png")){
                         fileUtilities.saveFile(this, files[i]);
